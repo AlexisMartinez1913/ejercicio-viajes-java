@@ -1,5 +1,6 @@
 
 package ejercicio.viajes;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -16,6 +17,7 @@ public class EjercicioViajes {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner teclado = new Scanner(System.in);
+        DecimalFormat formato = new DecimalFormat("####.####");
         
         int n;
         String codigoViaje = "";
@@ -49,13 +51,11 @@ public class EjercicioViajes {
                     valorPersona = 700000;
                     break;
                 default:
-                    valorPersona = 0;        
-                    
+                    valorPersona = 0;              
             }
             
-            
             valorViaje = numeroPersonas * valorPersona;
-            System.out.println("El valor del viaje es: " + valorViaje);
+            System.out.println("El valor del viaje es: " + formato.format(valorViaje));
         }
     }
     
